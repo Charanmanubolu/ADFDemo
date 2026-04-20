@@ -1,0 +1,54 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "ADF-Dev-Env-Charan"
+		},
+		"LS_ADLS_Multifile_accountKey": {
+			"value": ""
+		},
+		"LS_ADLS_outputMultifile_accountKey": {
+			"value": ""
+		},
+		"LS_ADLS_parquet_accountKey": {
+			"value": ""
+		},
+		"LS_BLOB_excel_connectionString": {
+			"value": ""
+		},
+		"LS_SQLServer_password": {
+			"value": ""
+		},
+		"LS_ADLS_Multifile_properties_typeProperties_url": {
+			"value": "https://adlsdevcharan.dfs.core.windows.net"
+		},
+		"LS_ADLS_outputMultifile_properties_typeProperties_url": {
+			"value": "https://adlsdevcharan.dfs.core.windows.net/"
+		},
+		"LS_ADLS_parquet_properties_typeProperties_url": {
+			"value": "https://adlsdevcharan.dfs.core.windows.net"
+		},
+		"LS_AzureSQL_Practice_properties_typeProperties_server": {
+			"value": "charan-sql-server-dev.database.windows.net"
+		},
+		"LS_AzureSQL_Practice_properties_typeProperties_database": {
+			"value": "db-practice-01"
+		},
+		"LS_AzureSQL_Practice_properties_typeProperties_userName": {
+			"value": "charanadmin"
+		},
+		"LS_KeyVault_properties_typeProperties_baseUrl": {
+			"value": "https://my-secure-vault-01.vault.azure.net/"
+		},
+		"LS_SQLServer_properties_typeProperties_server": {
+			"value": "DESKTOP-DEVAR3N"
+		},
+		"LS_SQLServer_properties_typeProperties_database": {
+			"value": "MYSqlDB"
+		},
+		"LS_SQLServer_properties_typeProperties_userName": {
+			"value": "Charan_ADF"
+		}
+	}
+}
