@@ -1,0 +1,21 @@
+{
+	"name": "LS_SQLServer",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "DESKTOP-DEVAR3N",
+			"database": "MYSqlDB",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "Charan_ADF",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIwMjU2MTEyOC1iNTk5LTRlMDUtOGNjNy04ZDY4ZDYwNjE1MmMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "SelfHosted-integrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

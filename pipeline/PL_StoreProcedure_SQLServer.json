@@ -1,0 +1,48 @@
+{
+	"name": "PL_StoreProcedure_SQLServer",
+	"properties": {
+		"activities": [
+			{
+				"name": "SP_SqlServel",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[insertCharanTableData]",
+					"storedProcedureParameters": {
+						"age": {
+							"value": "24",
+							"type": "Int32"
+						},
+						"email": {
+							"value": "sai@gami.com",
+							"type": "String"
+						},
+						"id": {
+							"value": "2",
+							"type": "Int32"
+						},
+						"name": {
+							"value": "charan",
+							"type": "String"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "LS_SQLServer",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2026-04-15T03:06:24Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,20 @@
+{
+	"name": "DS_movies_parquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLS_parquet",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "ouput-movies"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

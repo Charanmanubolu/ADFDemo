@@ -1,0 +1,65 @@
+{
+	"name": "PL_LOOKUP_blob",
+	"properties": {
+		"activities": [
+			{
+				"name": "lookUP_testData",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"wildcardFileName": "*.csv",
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"dataset": {
+						"referenceName": "DS_blob_test_csv",
+						"type": "DatasetReference"
+					},
+					"firstRowOnly": false
+				}
+			},
+			{
+				"name": "filter_data",
+				"type": "Filter",
+				"dependsOn": [
+					{
+						"activity": "lookUP_testData",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('lookUP_testData').output.value",
+						"type": "Expression"
+					},
+					"condition": {
+						"value": "@equals(item().SIC_code,'1110' )",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2026-04-18T17:27:56Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

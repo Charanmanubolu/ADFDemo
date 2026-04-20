@@ -1,0 +1,37 @@
+{
+	"name": "PL_execute_Pl_getMetaData_bolb_movies",
+	"properties": {
+		"activities": [
+			{
+				"name": "Execute Pipeline",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_getMetaData_blob_movies",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true,
+					"parameters": {
+						"ActionType": {
+							"value": "@pipeline().parameters.parentAction",
+							"type": "Expression"
+						}
+					}
+				}
+			}
+		],
+		"parameters": {
+			"parentAction": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2026-04-19T17:27:10Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

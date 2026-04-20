@@ -1,0 +1,110 @@
+{
+	"name": "DS_SQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SQLServer",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "Row_ID",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "Order_ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Order_Date",
+				"type": "varchar"
+			},
+			{
+				"name": "Ship_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Ship_Mode",
+				"type": "varchar"
+			},
+			{
+				"name": "Customer_ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Customer_Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Segment",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Country_Region",
+				"type": "nvarchar"
+			},
+			{
+				"name": "City",
+				"type": "nvarchar"
+			},
+			{
+				"name": "State",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Postal_Code",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Region",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Product_ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Category",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Sub_Category",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Product_Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Sales",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Quantity",
+				"type": "tinyint",
+				"precision": 3
+			},
+			{
+				"name": "Discount",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Profit",
+				"type": "float",
+				"precision": 15
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Superstore_orders"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,9 @@
+{
+	"name": "ADF-Dev-Env-Charan",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d6094c8a-7aa1-4aa2-a45e-da6bf2d804b8",
+		"tenantId": "a607cdc9-c43d-4918-8ffa-ddc8f088baf6"
+	}
+}

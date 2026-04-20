@@ -1,0 +1,35 @@
+{
+	"name": "DS_Blob_excel",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_BLOB_excel",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Sheet1",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "salary.xlsx",
+				"container": "inputsalary"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "id",
+				"type": "String"
+			},
+			{
+				"name": "name",
+				"type": "String"
+			},
+			{
+				"name": "salary",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

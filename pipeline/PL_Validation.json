@@ -1,0 +1,24 @@
+{
+	"name": "PL_Validation",
+	"properties": {
+		"activities": [
+			{
+				"name": "File Exist or not",
+				"type": "Validation",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "DS_Blob_excel",
+						"type": "DatasetReference"
+					},
+					"timeout": "0.12:00:00",
+					"sleep": 10
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2026-04-16T03:44:16Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
